@@ -1,0 +1,50 @@
+body{
+  background-color: #24252D;
+  color: white !important;
+ 
+}
+
+.review-container {
+  background: rgb(67,206,162);
+background: linear-gradient(90deg, rgba(67,206,162,1) 0%, rgba(24,90,157,1) 100%);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .review-content {
+    text-align: center;
+  }
+  
+  .review-text {
+    font-size: 18px;
+    color: white;
+  }
+  
+  .variable-data {
+    font-size: 16px;
+    color: white;
+  }
+
+  .bg-gardient{
+    background: rgb(67,206,162);
+    background: linear-gradient(90deg, rgba(67,206,162,1) 0%, rgba(24,90,157,1) 100%);
+  }
+
+  .btn-gradient{
+    background: rgb(24,90,157);
+    background: linear-gradient(90deg, rgba(24,90,157,1) 0%, rgba(67,206,162,1) 100%);
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+
+  }
+  .bg-form{
+    background-color: #1B1A21 !important;
+  }
+ .form-control{
+ box-shadow: none !important;
+ color: white !important;
+ border: none !important;
+ }
