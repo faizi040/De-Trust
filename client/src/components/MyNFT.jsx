@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 const MyNFT = () => {
     const [allNfts, setAllNfts] = useState([]);
-    // const [comment, setComment] = useState('');
     const context = useContext(walletContext);
     const { myContarct, currentAccount,user } = context;
     const navigate = useNavigate();
@@ -25,36 +24,6 @@ const MyNFT = () => {
             console.error('Error getting all NFT:', error);
         }
     }
-
-    // const upVote = async (tokenId) => {
-    //     try {
-    //         const upvote = await myContarct.methods.upvoteReview(tokenId).send({ from: currentAccount });
-    //         await getAllNfts();
-    //     } catch (error) {
-    //         console.error('Error upvoting review:', error);
-    //     }
-    // }
-    // const downVote = async (tokenId) => {
-    //     try {
-    //         const downvote = await myContarct.methods.downvoteReview(tokenId).send({ from: currentAccount });
-    //         await getAllNfts();
-    //     } catch (error) {
-    //         console.error('Error downvoting review:', error);
-    //     }
-    // }
-    // const createComment = async (e, tokenId) => {
-    //     try {
-    //         e.preventDefault();
-    //         console.log(tokenId);
-    //         const hasCommented = await myContarct.methods.commentOnReview(tokenId, comment).send({ from: currentAccount });
-    //         console.log(hasCommented);
-    //         setComment('');
-    //         await getAllNfts();
-    //     } catch (error) {
-    //         console.error('Error adding Comment:', error);
-    //     }
-    // }
-
     const handleComment = (SectionId) => {
         try {
             const commentSection = document.getElementById(SectionId);
@@ -69,28 +38,11 @@ const MyNFT = () => {
             console.error('Error :', error);
         }
     }
-    const handleReview = (SectionId) => {
-        try {
-            const reviewSection = document.getElementById(SectionId);
-            if (reviewSection.style.display == 'none') {
-                reviewSection.style.display = 'block';
-            }
-            else {
-                reviewSection.style.display = 'none';
-            }
-
-        } catch (error) {
-            console.error('Error :', error);
-        }
-    }
     const isWalletConnected = () => {
         if (!currentAccount || !user) {
             navigate('/');
         }
     }
-    const shortenAddress = (address) => (
-        `${address.slice(0, 5)}...${address.slice(address.length - 4)}`
-    );
     useEffect(() => {
         getAllNfts();
         isWalletConnected();
@@ -124,23 +76,11 @@ const MyNFT = () => {
                                             return <li className="list-group-item bg-dark text-white" key={id}>{comment}</li>
                                         })}
                                     </ul> <hr />
-                                    <div className='d-flex justify-content-between align-items-center'>
-                                        <button className='btn-gradient'>List For Sale</button>
-                                        {/* {/* <p >Seller : {shortenAddress(NFT._seller)}</p> */}
+                                    <div className='d-flex justify-content-center align-items-center'>
+                                        {/* <button className='btn-gradient'>List For Sale</button> */}
                                         <p >Price : {web3.utils.fromWei(NFT._price, 'ether')} ETH</p>
                                     </div>
-                                    {/* <hr /> */}
-                                    {/* <p onClick={() => handleReview(`review-section-${key}`)}>Write a Comment</p>
-                                    <form id={`review-section-${key}`} style={{ display: 'none' }}>
-                                        <div className="mb-3 review-content"  >
-                                            <input type="text" className="form-control review-text bg-dark" id="review" value={comment} onChange={(e) => setComment(e.target.value)} />
-                                        </div>
-
-                                        <div className="d-flex justify-content-center">
-                                            <button className="btn-gradient" onClick={(e) => createComment(e, NFT.tokenid)}>Comment</button>
-                                        </div>
-
-                                    </form > */}
+                                   
 
                                 </div>
                             </div>

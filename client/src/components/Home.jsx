@@ -24,8 +24,12 @@ const Home = () => {
   }
   useEffect(() => {
     getAllDomains();
-    isUserRegistered();
+    
   }, []);
+
+  useEffect(()=>{
+    isUserRegistered();
+  },[])
 
 
   return (
