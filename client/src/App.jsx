@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import walletContext from "./Context/walletContext.jsx";
 import Navbar from "./components/Navbar.jsx";
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
@@ -17,7 +17,8 @@ function App() {
   const web3 = new Web3(window.ethereum);
   const myContarct = new web3.eth.Contract(
     UserAndNFTMarketPlace.abi,
-    '0x34258f9b70511638E900DF91d616FDd06e2AAdce',
+    '0x0312a95c6625312E70F4Fa189A634555C1b135B2'
+    // '0x34258f9b70511638E900DF91d616FDd06e2AAdce',
   );
   const connectWallet = async () => {
 
@@ -37,13 +38,13 @@ function App() {
     }
   };
 
-  const isUserRegistered =async()=>{
+  const isUserRegistered = async () => {
     const isUser = await myContarct.methods.isUser(currentAccount).call();
     console.log(isUser);
     setUser(isUser);
   }
 
-  
+
 
   useEffect(() => {
     isUserRegistered();
@@ -52,17 +53,17 @@ function App() {
 
   return (
     <>
-      <walletContext.Provider value={{ isWalletConnected, currentAccount, connectWallet,myContarct,user,isUserRegistered }}>
+      <walletContext.Provider value={{ isWalletConnected, currentAccount, connectWallet, myContarct, user, isUserRegistered }}>
         <Router>
           <Navbar />
 
 
           <Routes>
-            <Route exact path="/" element={<Home/>}></Route>
-            <Route exact path="/myNFT" element={<MyNFT/>}></Route>
-            <Route exact path="/userLogin" element={<UserLogin/>}></Route>
-            <Route exact path="/bussinessLogin" element={<BussinessLogin/>}></Route>
-            <Route  exact path="/createReview/:domain" element={<CreateReview/>}></Route>
+            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/myNFT" element={<MyNFT />}></Route>
+            <Route exact path="/userLogin" element={<UserLogin />}></Route>
+            <Route exact path="/bussinessLogin" element={<BussinessLogin />}></Route>
+            <Route exact path="/createReview/:domain" element={<CreateReview />}></Route>
             <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
           </Routes>
 

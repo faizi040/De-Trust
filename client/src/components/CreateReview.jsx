@@ -22,7 +22,7 @@ const CreateReview = () => {
   const projectSecret = import.meta.env.VITE_APP_NFT_IPFS_API_KEY_SECRET;
   const auth = `Basic ${Buffer.from(`${projectId}:${projectSecret}`).toString('base64')}`;
   const navigate = useNavigate();
-  const Client = ipfsHttpClient({
+  const client = ipfsHttpClient({
     host: 'ipfs.infura.io',
     port: 5001,
     protocol: 'https',
@@ -55,7 +55,7 @@ const CreateReview = () => {
       console.log(newNFT);
       setReview('');
       await getAllNfts();
-      
+
     } catch (error) {
       console.error('Error upvoting review:', error);
     }

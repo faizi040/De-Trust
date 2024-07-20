@@ -7,9 +7,9 @@
       "type": "error"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"MathOverflowedMulDiv\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Standard math utilities missing in the Solidity language.\",\"errors\":{\"MathOverflowedMulDiv()\":[{\"details\":\"Muldiv operation overflow.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/math/Math.sol\":\"Math\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/math/Math.sol\":{\"keccak256\":\"0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875\",\"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L\"]}},\"version\":1}",
-  "bytecode": "0x6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212202a69264d6db9985d5f8e54f6b68895f33315c58e4c7a24643283a4c61cbe239b64736f6c63430008170033",
-  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212202a69264d6db9985d5f8e54f6b68895f33315c58e4c7a24643283a4c61cbe239b64736f6c63430008170033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"MathOverflowedMulDiv\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Standard math utilities missing in the Solidity language.\",\"errors\":{\"MathOverflowedMulDiv()\":[{\"details\":\"Muldiv operation overflow.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/math/Math.sol\":\"Math\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/math/Math.sol\":{\"keccak256\":\"0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875\",\"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L\"]}},\"version\":1}",
+  "bytecode": "0x6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220203246029dab93f34b327ba02915d37e6c29f598a14b59593a6c7ca26ac8c1c664736f6c634300081a0033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220203246029dab93f34b327ba02915d37e6c29f598a14b59593a6c7ca26ac8c1c664736f6c634300081a0033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
@@ -3460,7 +3460,7 @@
                           }
                         ]
                       },
-                      "evmVersion": "shanghai",
+                      "evmVersion": "cancun",
                       "externalReferences": [
                         {
                           "declaration": 2128,
@@ -3671,8 +3671,8 @@
                                 "referencedDeclaration": 1859,
                                 "src": "5112:20:14",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_function_error_pure$__$returns$__$",
-                                  "typeString": "function () pure"
+                                  "typeIdentifier": "t_function_error_pure$__$returns$_t_error_$",
+                                  "typeString": "function () pure returns (error)"
                                 }
                               },
                               "id": 2150,
@@ -3687,8 +3687,8 @@
                               "src": "5112:22:14",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_tuple$__$",
-                                "typeString": "tuple()"
+                                "typeIdentifier": "t_error",
+                                "typeString": "error"
                               }
                             },
                             "id": 2151,
@@ -3882,7 +3882,7 @@
                           }
                         ]
                       },
-                      "evmVersion": "shanghai",
+                      "evmVersion": "cancun",
                       "externalReferences": [
                         {
                           "declaration": 2122,
@@ -4259,7 +4259,7 @@
                           }
                         ]
                       },
-                      "evmVersion": "shanghai",
+                      "evmVersion": "cancun",
                       "externalReferences": [
                         {
                           "declaration": 2122,
@@ -13975,11 +13975,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.8.23+commit.f704f362.Emscripten.clang"
+    "version": "0.8.26+commit.8a97fa7a.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-12-04T08:02:11.451Z",
+  "updatedAt": "2024-07-16T14:00:06.129Z",
   "devdoc": {
     "details": "Standard math utilities missing in the Solidity language.",
     "errors": {

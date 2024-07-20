@@ -1,9 +1,9 @@
 {
   "contractName": "Counters",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Matt Condon (@shrugs)\",\"details\":\"Provides counters that can only be incremented, decremented or reset. This can be used e.g. to track the number of elements in a mapping, issuing ERC721 ids, or counting request ids. Include with `using Counters for Counters.Counter;`\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Counters\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/Counters.sol\":\"Counters\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Counters.sol\":{\"keccak256\":\"0xcd3060478742f60f310d1a1416a1d28bc9304173b57fae06928212dc7c292538\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b2511f343ab2b55070d4830ba30a0871650f7ae657089a54cd8bddfa302f4430\",\"dweb:/ipfs/QmTA9B3CJX834TXAxhYthrj6VtSCUoSHnqKeCzwt3v1e18\"]}},\"version\":1}",
-  "bytecode": "0x6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220230616992c8e738985cc2809e18065e846c40d022abcf673faefb5d0b1441a1764736f6c63430008170033",
-  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220230616992c8e738985cc2809e18065e846c40d022abcf673faefb5d0b1441a1764736f6c63430008170033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Matt Condon (@shrugs)\",\"details\":\"Provides counters that can only be incremented, decremented or reset. This can be used e.g. to track the number of elements in a mapping, issuing ERC721 ids, or counting request ids. Include with `using Counters for Counters.Counter;`\",\"kind\":\"dev\",\"methods\":{},\"title\":\"Counters\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/utils/Counters.sol\":\"Counters\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Counters.sol\":{\"keccak256\":\"0xcd3060478742f60f310d1a1416a1d28bc9304173b57fae06928212dc7c292538\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b2511f343ab2b55070d4830ba30a0871650f7ae657089a54cd8bddfa302f4430\",\"dweb:/ipfs/QmTA9B3CJX834TXAxhYthrj6VtSCUoSHnqKeCzwt3v1e18\"]}},\"version\":1}",
+  "bytecode": "0x6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212200907394f4c93e695ee5c54f556ef6acf3be930fb98d5b030e50fc6805a65251764736f6c634300081a0033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212200907394f4c93e695ee5c54f556ef6acf3be930fb98d5b030e50fc6805a65251764736f6c634300081a0033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
@@ -520,6 +520,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         4294967278,
+                        4294967278,
                         4294967278
                       ],
                       "referencedDeclaration": 4294967278,
@@ -859,11 +860,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.8.23+commit.f704f362.Emscripten.clang"
+    "version": "0.8.26+commit.8a97fa7a.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-12-04T08:02:11.435Z",
+  "updatedAt": "2024-07-16T14:00:06.105Z",
   "devdoc": {
     "author": "Matt Condon (@shrugs)",
     "details": "Provides counters that can only be incremented, decremented or reset. This can be used e.g. to track the number of elements in a mapping, issuing ERC721 ids, or counting request ids. Include with `using Counters for Counters.Counter;`",

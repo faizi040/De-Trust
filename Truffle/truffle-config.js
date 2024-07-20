@@ -66,19 +66,33 @@ module.exports = {
     // options below to some value.
     //
     development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 7545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
     },
-     matic: {
+    matic: {
       // provider: () => new HDWalletProvider(MNEMONIC, 'https://polygon-mumbai.infura.io/v3/bd3ccfb8add3413e93070d4786a5ab57'),
       provider: () => new HDWalletProvider(MNEMONIC, 'https://polygon-mumbai.alchemyapi.io/v2/9_s2mf2mJnXxz-riiSG3_P1ffFKVohki'),
       network_id: 80001,       // matic's id
-       gas: 5531526,
+      gas: 5531526,
       confirmations: 2,    // # of confirmations to wait between deployments. (default: 0)
-      timeout: 300000 ,
+      timeout: 300000,
       timeoutBlocks: 2000000000,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    },
+    bsctestnet: {
+      provider: () => new HDWalletProvider(
+        MNEMONIC,
+        `https://data-seed-prebsc-1-s1.binance.org:8545`, // BSC testnet URL
+      ),
+      network_id: 97,       // BSC testnet ID
+      gas: 5000000,         // Gas limit
+      gasPrice: 10000000000, // 10 Gwei (adjust as needed)
+      confirmations: 10,    // # of confirmations to wait between deployments
+      timeoutBlocks: 200,   // # of blocks before a deployment times out
+      skipDryRun: true,     // Skip dry run before migrations
+      networkCheckTimeout: 1000000 ,
+      deploymentPollingInterval: 15000 // Add this line to increase polling interval
     },
     //
     // An additional network, but with some advanced options…
@@ -150,4 +164,3 @@ module.exports = {
   //   }
   // }
 };
-  
